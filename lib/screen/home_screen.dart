@@ -14,15 +14,42 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text("HomeScreen"),
       ),
-      drawer: Drawer(),
-      body: const Center(
-        child: Text("Hello world"),
+      drawer: const Drawer(),
+      body: Container(
+        color: Colors.grey[400],
+        margin: const EdgeInsets.all(8),
+        child: Column(
+          children: [
+            Column(
+              children: [
+                Text("HomeScreen"),
+                ElevatedButton(
+                  onPressed: () => {},
+                  child: Text("HomeScreen"),
+                )
+              ],
+            ),
+            Row(
+              children: [
+                Text("HomeScreen"),
+                ElevatedButton(
+                  onPressed: () => {},
+                  child: Text("HomeScreen"),
+                )
+              ],
+            ),
+          ],
+        ),
       ),
-      bottomNavigationBar: BottomNavigationBar(items: const [
-        BottomNavigationBarItem(icon: Icon(Icons.ac_unit), label: "Home"),
-        BottomNavigationBarItem(icon: Icon(Icons.content_paste), label: "List"),
-        BottomNavigationBarItem(icon: Icon(Icons.person_search), label: "Info")
-      ]),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.ac_unit), label: "Home"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.content_paste), label: "List"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person_search), label: "Info")
+        ],
+      ),
     );
   }
 }
