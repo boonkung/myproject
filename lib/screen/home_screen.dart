@@ -16,29 +16,34 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       drawer: const Drawer(),
       body: Container(
-        color: Colors.grey[400],
-        margin: const EdgeInsets.all(8),
-        child: Column(
-          children: [
-            Column(
-              children: [
-                Text("HomeScreen"),
-                ElevatedButton(
-                  onPressed: () => {},
-                  child: Text("HomeScreen"),
-                )
-              ],
-            ),
-            Row(
-              children: [
-                Text("HomeScreen"),
-                ElevatedButton(
-                  onPressed: () => {},
-                  child: Text("HomeScreen"),
-                )
-              ],
-            ),
-          ],
+        child: Container(
+          height: 60,
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.black12),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Icon(Icons.ac_unit),
+                    Text("UNIT"),
+                  ]),
+              Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Icon(Icons.list_sharp),
+                    Text("ABC"),
+                  ]),
+              Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Icon(Icons.access_alarm),
+                    Text("ALARM"),
+                  ]),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -47,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(
               icon: Icon(Icons.content_paste), label: "List"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.person_search), label: "Info")
+              icon: Icon(Icons.person_search), label: "Info"),
         ],
       ),
     );
